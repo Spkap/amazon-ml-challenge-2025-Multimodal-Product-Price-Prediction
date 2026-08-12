@@ -1,0 +1,41 @@
+{
+  "hash_algorithm": "sha256",
+  "notebooks": [
+    {
+      "ref": "sourabhkap/amazon-ml-challenge",
+      "file": "amazon-ml-challenge.ipynb",
+      "cells": 90,
+      "code_cells": 90,
+      "markdown_cells": 0,
+      "bytes": 63251,
+      "sha256": "9dba27ccdd9eac0cb82b14c593215e9276f4dcc7f5e879c5c1349a5aca126ca8"
+    },
+    {
+      "ref": "sourabhkap/amlc-25",
+      "file": "amlc-25.ipynb",
+      "cells": 87,
+      "code_cells": 47,
+      "markdown_cells": 40,
+      "bytes": 71715,
+      "sha256": "738189caf1d8df6d209e94e355194e3a947c52ea45c65d39722f40895692d1e8"
+    },
+    {
+      "ref": "harshjavajunkie/csv-files",
+      "file": "csv-files.ipynb",
+      "cells": 7,
+      "code_cells": 6,
+      "markdown_cells": 1,
+      "bytes": 31759,
+      "sha256": "3f12eeff2e71834e521aa9061744c45363d820a85087a48a6c9556ae6f8b48b4"
+    },
+    {
+      "ref": "sourabhkap/mlc-sourabh",
+      "file": "mlc-sourabh.ipynb",
+      "cells": 20,
+      "code_cells": 20,
+      "markdown_cells": 0,
+      "bytes": 67844,
+      "sha256": "0241c07f450cdb5196031a26b986fd57c0fee1544cc7916874fba85cd66cce30"
+    }
+  ]
+}

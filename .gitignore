@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+kaggle.json
+**/kaggle.json
+
+# Large/private challenge data: recover through the checked-in manifests/scripts.
+data/raw/
+data/interim/
+data/processed/
+data/images/
+local_archive/
+archive/recovered/*.zip
+archive/recovered/*.npy
+archive/recovered/*.npz
+
+# Generated model and feature artifacts
+artifacts/
+models/
+outputs/
+checkpoints/
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.h5
+*.keras
+*.parquet
+*.safetensors
+
+# Kaggle download archives
+*.zip
+*.tar
+*.tar.gz
+
+# Keep intentionally small, source-controlled examples.
+!data/samples/
+!data/samples/**
+!data/manifests/
+!data/manifests/**

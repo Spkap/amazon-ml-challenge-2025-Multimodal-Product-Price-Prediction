@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="236" viewBox="0 0 1200 236" role="img" aria-labelledby="title desc">
+  <title id="title">Amazon ML Challenge solution summary</title>
+  <desc id="desc">149,999 prepared product rows, 2,450 multimodal features, four ensemble models, and rank 476 in the Top 7 percent.</desc>
+  <rect x="1" y="1" width="1198" height="234" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <rect x="2" y="2" width="1196" height="5" rx="3" fill="#2563EB"/>
+  <g font-family="Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif">
+    <g transform="translate(40 38)">
+      <rect width="258" height="158" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="22" y="43" font-size="12" font-weight="700" letter-spacing="1.2" fill="#64748B">PREPARED DATA</text>
+      <text x="22" y="88" font-size="34" font-weight="720" letter-spacing="-1" fill="#0F172A">149,999</text>
+      <text x="22" y="120" font-size="15" font-weight="600" fill="#334155">Product rows</text>
+      <text x="22" y="144" font-size="13" fill="#64748B">74,999 train · 75,000 test</text>
+    </g>
+    <g transform="translate(327 38)">
+      <rect width="258" height="158" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="22" y="43" font-size="12" font-weight="700" letter-spacing="1.2" fill="#64748B">FEATURE MATRIX</text>
+      <text x="22" y="88" font-size="34" font-weight="720" letter-spacing="-1" fill="#0F172A">2,450</text>
+      <text x="22" y="120" font-size="15" font-weight="600" fill="#334155">Multimodal features</text>
+      <text x="22" y="144" font-size="13" fill="#64748B">SigLIP2 · MiniLM · catalogue</text>
+    </g>
+    <g transform="translate(614 38)">
+      <rect width="258" height="158" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="22" y="43" font-size="12" font-weight="700" letter-spacing="1.2" fill="#64748B">ENSEMBLE</text>
+      <text x="22" y="88" font-size="34" font-weight="720" letter-spacing="-1" fill="#0F172A">04</text>
+      <text x="22" y="120" font-size="15" font-weight="600" fill="#334155">Complementary models</text>
+      <text x="22" y="144" font-size="13" fill="#64748B">LGBM · XGB · CatBoost · MLP</text>
+    </g>
+    <g transform="translate(901 38)">
+      <rect width="259" height="158" rx="12" fill="#EFF6FF" stroke="#BFDBFE"/>
+      <text x="22" y="43" font-size="12" font-weight="700" letter-spacing="1.2" fill="#2563EB">CHALLENGE RESULT</text>
+      <text x="22" y="88" font-size="34" font-weight="720" letter-spacing="-1" fill="#1D4ED8">Top 7%</text>
+      <text x="22" y="120" font-size="15" font-weight="600" fill="#1E3A8A">Rank 476</text>
+      <text x="22" y="144" font-size="13" fill="#3B82F6">6,500+ participants</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "feature_dtype": "float32",
+  "feature_width": 2450,
+  "feature_blocks": [
+    {"name": "siglip2_image", "start": 0, "stop": 1024, "width": 1024},
+    {"name": "siglip2_text", "start": 1024, "stop": 2048, "width": 1024},
+    {"name": "siglip2_cosine", "start": 2048, "stop": 2049, "width": 1},
+    {"name": "minilm_text", "start": 2049, "stop": 2433, "width": 384},
+    {"name": "catalogue", "start": 2433, "stop": 2450, "width": 17}
+  ],
+  "embeddings": {
+    "siglip2": {
+      "checkpoint": "google/siglip2-large-patch16-384",
+      "revision": "1b426889ea62b5a72bf9839009a1b184bfc9c178",
+      "projection_dim": 1024,
+      "max_text_length": 64,
+      "batch_size": 16,
+      "image_timeout_seconds": 15,
+      "image_retries": 3,
+      "max_image_bytes": 26214400
+    },
+    "minilm": {
+      "checkpoint": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "embedding_dim": 384,
+      "max_sequence_length": 64,
+      "batch_size": 256,
+      "normalize_embeddings": false
+    }
+  },
+  "catalogue_features": [
+    "pack_quantity",
+    "base_unit_value",
+    "total_declared_value",
+    "character_count",
+    "word_count",
+    "numbered_bullet_count",
+    "line_count",
+    "digit_count",
+    "unique_word_count",
+    "item_name_word_count",
+    "description_word_count",
+    "measurement_mention_count",
+    "has_brand",
+    "has_pack_expression",
+    "unit_frequency",
+    "brand_frequency",
+    "product_class_frequency"
+  ],
+  "cross_validation": {"folds": 5, "shuffle": true, "seed": 42},
+  "target": {"transform": "log1p", "prediction_floor": 0.01},
+  "model_order": ["lightgbm", "xgboost", "catboost", "mlp"],
+  "models": {
+    "lightgbm": {
+      "n_estimators": 2500,
+      "learning_rate": 0.03,
+      "num_leaves": 63,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "early_stopping_rounds": 100
+    },
+    "xgboost": {
+      "n_estimators": 2500,
+      "learning_rate": 0.03,
+      "max_depth": 8,
+      "tree_method": "hist",
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "early_stopping_rounds": 100
+    },
+    "catboost": {
+      "iterations": 2500,
+      "learning_rate": 0.03,
+      "depth": 8,
+      "loss_function": "RMSE",
+      "early_stopping_rounds": 100
+    },
+    "mlp": {
+      "hidden_sizes": [512, 128],
+      "dropout": [0.2, 0.1],
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "batch_size": 512,
+      "max_epochs": 50,
+      "patience": 6,
+      "device": "auto"
+    }
+  },
+  "ensemble": {
+    "method": "slsqp_smape",
+    "minimum_weight": 0.01,
+    "sum_to_one": true,
+    "initializations": "equal_and_near_vertices"
+  }
+}

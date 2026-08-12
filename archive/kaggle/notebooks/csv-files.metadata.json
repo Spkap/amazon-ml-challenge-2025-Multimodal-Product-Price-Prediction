@@ -1,0 +1,21 @@
+{
+  "source_url": "https://www.kaggle.com/code/harshjavajunkie/csv-files",
+  "requested_ref": "harshjavajunkie/csv-files",
+  "id": 94673677,
+  "ref": "harshjavajunkie/csv-files",
+  "title": "CSV_Files",
+  "author": "Harsh_JavaJunkie",
+  "slug": "csv-files",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_data_sources": [
+    "",
+    "harshitr9671/amzn-ml-challenge-images"
+  ],
+  "enable_tpu": false,
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:23c0e8309600afc19063b29d98f0f1e58dc32d03369b15ad204d43d90add6325",
+  "machine_shape": "NvidiaTeslaT4"
+}

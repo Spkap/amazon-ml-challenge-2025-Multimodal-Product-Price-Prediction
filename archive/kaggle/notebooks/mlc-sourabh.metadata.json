@@ -1,0 +1,25 @@
+{
+  "source_url": "https://www.kaggle.com/code/sourabhkap/mlc-sourabh",
+  "requested_ref": "sourabhkap/mlc-sourabh",
+  "id": 94674668,
+  "ref": "sourabhkap/mlc-sourabh",
+  "title": "MLC Sourabh",
+  "author": "Sourabh Kapure",
+  "slug": "mlc-sourabh",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_data_sources": [
+    "sourabhkap/cleaned-datasets",
+    "sourabhkap/image-embedings-final",
+    "sourabhkap/test-dataset",
+    "sourabhkap/train-dataset"
+  ],
+  "total_votes": 1,
+  "enable_tpu": false,
+  "current_version_number": 1,
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:23c0e8309600afc19063b29d98f0f1e58dc32d03369b15ad204d43d90add6325",
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,21 @@
+{
+  "source_url": "https://www.kaggle.com/code/sourabhkap/amazon-ml-challenge",
+  "requested_ref": "sourabhkap/amazon-ml-challenge",
+  "id": 94725460,
+  "ref": "sourabhkap/amazon-ml-challenge",
+  "title": "amazon_ml_challenge",
+  "author": "Sourabh Kapure",
+  "slug": "amazon-ml-challenge",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_data_sources": [
+    "saptarshim596/amazon-ml-dataset-2025",
+    "saptarshim596/first-1000-images"
+  ],
+  "enable_tpu": false,
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:23c0e8309600afc19063b29d98f0f1e58dc32d03369b15ad204d43d90add6325",
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,64 @@
+{
+  "source": "Authenticated Kaggle dataset metadata",
+  "size_unit": "bytes",
+  "datasets": [
+    {
+      "ref": "sourabhkap/image-embedings-final",
+      "private": true,
+      "total_bytes": 460797184,
+      "files": [
+        {"name": "test_image_embeddings.npy", "bytes": 230400128},
+        {"name": "train_image_embeddings.npy", "bytes": 230397056}
+      ]
+    },
+    {
+      "ref": "sourabhkap/cleaned-datasets",
+      "private": true,
+      "total_bytes": 146623185,
+      "files": [
+        {"name": "Cleaned datasets/cleaned_test.csv", "bytes": 73160208},
+        {"name": "Cleaned datasets/cleaned_train.csv", "bytes": 73462977}
+      ]
+    },
+    {
+      "ref": "sourabhkap/train-dataset",
+      "private": true,
+      "total_bytes": 73495639,
+      "files": [{"name": "train.csv", "bytes": 73495639}]
+    },
+    {
+      "ref": "sourabhkap/test-dataset",
+      "private": true,
+      "total_bytes": 73160208,
+      "files": [{"name": "test.csv", "bytes": 73160208}]
+    },
+    {
+      "ref": "harshitr9671/amzn-mlc-dataset",
+      "private": true,
+      "total_bytes": 146764420,
+      "files": [
+        {"name": "sample_test.csv", "bytes": 106068},
+        {"name": "sample_test_out.csv", "bytes": 2505},
+        {"name": "test.csv", "bytes": 73160208},
+        {"name": "train.csv", "bytes": 73495639}
+      ]
+    },
+    {
+      "ref": "harshitr9671/amzn-ml-challenge-images",
+      "private": true,
+      "total_bytes": 18311000025,
+      "files": [{"glob": "images/*.jpg", "count": 74999, "bytes": 18311000025}]
+    },
+    {
+      "ref": "saptarshim596/amazon-ml-dataset-2025",
+      "private": false,
+      "total_bytes": 146764420,
+      "files": [
+        {"name": "sample_test.csv", "bytes": 106068},
+        {"name": "sample_test_out.csv", "bytes": 2505},
+        {"name": "test.csv", "bytes": 73160208},
+        {"name": "train.csv", "bytes": 73495639}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "project": "Amazon ML Challenge 2025",
+  "challenge_window": "11–13 October 2025",
+  "kaggle_source": {
+    "dataset_id": 8478897,
+    "dataset_version_id": 13366190,
+    "script_content_ids": [
+      267814462,
+      228520057,
+      267608085
+    ]
+  },
+  "row_contract": {
+    "train_rows": 74999,
+    "test_rows": 75000,
+    "stored_training_split": 64999,
+    "stored_validation_split": 10000,
+    "identifier": "sample_id",
+    "alignment": "The prepared CSV row order matches the corresponding full train and test arrays."
+  },
+  "feature_contract": {
+    "dtype": "float32",
+    "total_width": 2450,
+    "blocks": [
+      {
+        "name": "siglip2_image",
+        "start": 0,
+        "stop": 1024,
+        "width": 1024
+      },
+      {
+        "name": "siglip2_text",
+        "start": 1024,
+        "stop": 2048,
+        "width": 1024
+      },
+      {
+        "name": "siglip2_cosine_similarity",
+        "start": 2048,
+        "stop": 2049,
+        "width": 1
+      },
+      {
+        "name": "minilm_text",
+        "start": 2049,
+        "stop": 2433,
+        "width": 384
+      },
+      {
+        "name": "engineered_catalogue",
+        "start": 2433,
+        "stop": 2450,
+        "width": 17
+      }
+    ]
+  },
+  "model_revisions": {
+    "siglip2": {
+      "model_id": "google/siglip2-large-patch16-384",
+      "revision": "1b426889ea62b5a72bf9839009a1b184bfc9c178"
+    },
+    "minilm": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    }
+  },
+  "source_files": [
+    {
+      "name": "archive.zip",
+      "role": "Kaggle array archive",
+      "size_bytes": 1408798786,
+      "uncompressed_size_bytes": 2336586608,
+      "sha256": "0d22845a23f77dccbda071ccda5acce5267c276316b52877d5b6e9463d1e8652"
+    },
+    {
+      "name": "cleaned_train.csv",
+      "role": "Prepared training table",
+      "size_bytes": 73462977,
+      "rows": 74999,
+      "columns": [
+        "sample_id",
+        "catalog_content",
+        "image_link",
+        "price"
+      ],
+      "sha256": "dd9af26b89ff086e08c7ae053d179a84faee37f71ad955d0aec4046fe275c888"
+    },
+    {
+      "name": "cleaned_test.csv",
+      "role": "Prepared test table",
+      "size_bytes": 73160208,
+      "rows": 75000,
+      "columns": [
+        "sample_id",
+        "catalog_content",
+        "image_link"
+      ],
+      "sha256": "6d26bff5d51f657495209c07a9fce66cca786eee6b179f5617252fe3f62eaeba"
+    },
+    {
+      "name": "train_minilm_embeddings.npy",
+      "role": "Train MiniLM embeddings",
+      "size_bytes": 115198592,
+      "shape": [
+        74999,
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "e1744745a25a4610191edfa0ba23a12264a66ba1a8a4a712cd45d39b881b700d"
+    },
+    {
+      "name": "test_minilm_embeddings.npy",
+      "role": "Test MiniLM embeddings",
+      "size_bytes": 115200128,
+      "shape": [
+        75000,
+        384
+      ],
+      "dtype": "float32",
+      "sha256": "dbdbbbf92f4ca41d3757ec37173fd74b32d70894e76aa20b09db32db49b9ac6d"
+    }
+  ],
+  "archive_members": [
+    {
+      "name": "X_test.npy",
+      "size_bytes": 735000128,
+      "shape": [
+        75000,
+        2450
+      ],
+      "dtype": "float32",
+      "sha256": "8db3197b75c9a115c1f3e7d3d3dedd6b31a2d86ae0dac6d0973460bc1c2d42b0"
+    },
+    {
+      "name": "X_train_full.npy",
+      "size_bytes": 734990328,
+      "shape": [
+        74999,
+        2450
+      ],
+      "dtype": "float32",
+      "sha256": "e6a3b03e4096a414a844144acf2bd7d043bc8d678391df1ac82ebf68b8a6c5b0"
+    },
+    {
+      "name": "X_val.npy",
+      "size_bytes": 98000128,
+      "shape": [
+        10000,
+        2450
+      ],
+      "dtype": "float32",
+      "sha256": "2031cb0226a677f9e0b1661c20a3e839297ce5940947f266e6ab37e6d5e58029"
+    },
+    {
+      "name": "test_siglip2_image_embeddings.npy",
+      "size_bytes": 307200128,
+      "shape": [
+        75000,
+        1024
+      ],
+      "dtype": "float32",
+      "sha256": "e638a17598f907b20e3281a4ca01cf8870322ea134f64adc8401611a5abcbd4a"
+    },
+    {
+      "name": "test_text_attention_mask.npy",
+      "size_bytes": 38400128,
+      "shape": [
+        75000,
+        64
+      ],
+      "dtype": "int64",
+      "sha256": "567af08a5f73c161a17d519035014d446300ab543cc96951e8bfb9884cd122bd"
+    },
+    {
+      "name": "test_text_input_ids.npy",
+      "size_bytes": 38400128,
+      "shape": [
+        75000,
+        64
+      ],
+      "dtype": "int64",
+      "sha256": "21004f38103433173bccf8e0bd185e8c2b69badba0e329d0d8fb1d2026ab8754"
+    },
+    {
+      "name": "train_siglip2_image_embeddings.npy",
+      "size_bytes": 307196032,
+      "shape": [
+        74999,
+        1024
+      ],
+      "dtype": "float32",
+      "sha256": "315f28da2f6d12ad7d418934fecb0a8c9105c6428cad90d17dd5eb166defc34b"
+    },
+    {
+      "name": "train_text_attention_mask.npy",
+      "size_bytes": 38399616,
+      "shape": [
+        74999,
+        64
+      ],
+      "dtype": "int64",
+      "sha256": "e228f0bc2c8efe39e209023e77be2890770ed9847e675e5cb50d4641e17e9c4d"
+    },
+    {
+      "name": "train_text_input_ids.npy",
+      "size_bytes": 38399616,
+      "shape": [
+        74999,
+        64
+      ],
+      "dtype": "int64",
+      "sha256": "18dff8bd9a018a364d80c99cba26035cccf7dd9f5329ead49c3775b216c6a54f"
+    },
+    {
+      "name": "y_train.npy",
+      "size_bytes": 260124,
+      "shape": [
+        64999
+      ],
+      "dtype": "float32",
+      "sha256": "223a644b3120bcc8cdbe9607175be38699034942ee87a5bb925e602d07a5999b"
+    },
+    {
+      "name": "y_train_full.npy",
+      "size_bytes": 300124,
+      "shape": [
+        74999
+      ],
+      "dtype": "float32",
+      "sha256": "9d457ce7203e5414de862ac19d0ab3e6377a6ed76c75c1375db47b747ca7763c"
+    },
+    {
+      "name": "y_val.npy",
+      "size_bytes": 40128,
+      "shape": [
+        10000
+      ],
+      "dtype": "float32",
+      "sha256": "db1b87838c87609a7efb85061ce10c49eff0b51e1bef6e79173581693f1ce4d5"
+    }
+  ],
+  "distribution": {
+    "large_files_committed": false,
+    "manifest_only": true
+  }
+}
